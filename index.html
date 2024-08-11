@@ -23,75 +23,6 @@
             padding: 20px;
         }
 
-        .jumbotron {
-            background-color: #234d20;
-            color: white;
-            padding: 50px 20px;
-            margin-bottom: 30px;
-        }
-
-        .jumbotron .font h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .jumbotron .font p {
-            font-size: 1.2em;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .card img {
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .card-title {
-            font-size: 1.5em;
-        }
-
-        .card-text {
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-            padding: 5px 2px;
-            color: white;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 768px) {
-            .events-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .card {
-                width: 100%;
-                max-width: 400px;
-            }
-        }
-
         .image-slider {
             width: 100%;
             overflow: hidden;
@@ -144,13 +75,6 @@
             animation: fadeIn 2s ease-in-out;
         }
 
-        /* .animated-text {
-            font-size: 3em;
-            margin-bottom: 20px;
-            animation: textGlow 2s ease-in-out infinite, 1.5s ease-in-out;
-            text-shadow: 0 2 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
-        } */
-
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -159,23 +83,6 @@
             100% {
                 opacity: 1;
             }
-        }
-
-        @keyframes textGlow {
-
-            0%,
-            100% {
-                text-shadow: 0 0 1px rgba(255, 251, 0, 0.905), 0 0 2px rgba(242, 255, 0, 0.9), 0 0 3px rgba(248, 211, 2, 0.5);
-            }
-
-            50% {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
-            }
-        }
-
-        .slider-text p {
-            font-size: 1.2em;
-            animation: slideInFromBottom 1.5s ease-in-out;
         }
 
         @keyframes slideInFromBottom {
@@ -278,7 +185,6 @@
         }
 
         /* page seperation */
-
         .separation {
             height: 7px;
             background-color: #234d20;
@@ -286,66 +192,7 @@
             z-index: 20;
         }
 
-        .faq-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .faq-question {
-            display: flex;
-            align-items: center;
-            background: none;
-            border: none;
-            font-size: 16px;
-            width: 100%;
-            text-align: left;
-            outline: none;
-            cursor: pointer;
-        }
-
-        .faq-answer {
-            display: none;
-            padding-left: 25px;
-            margin-top: 5px;
-            font-size: 14px;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-
-        .plus-icon {
-            width: 20px;
-            height: 20px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-
-        .faq-item.active .plus-icon::before {
-            content: '-';
-        }
-
-        .plus-icon::before {
-            content: '+';
-        }
-
         /* sponsers*/
-
         .sponsors-section {
             /* max-width: 1000px; */
             width: 80%;
@@ -401,13 +248,6 @@
         }
 
         /* img dots */
-        body {
-            background-color: #c9df8a;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
         .container {
             width: 100%;
         }
@@ -447,17 +287,6 @@
             z-index: 2;
         }
 
-        .image-slider {
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        .image-slider img {
-            display: none;
-            width: 100%;
-        }
-
         .image-slider img.active {
             display: block;
         }
@@ -484,32 +313,7 @@
             background-color: #717171;
         }
 
-        .fas {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: #fff;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .fa-chevron-left {
-            left: 10px;
-        }
-
-        .fa-chevron-right {
-            right: 10px;
-        }
-
         /* speaker */
-        body {
-            background-color: #234d20;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
         .container {
             width: 100%;
             padding: 0 20px;
@@ -550,8 +354,6 @@
             padding-left: 20px;
         }
 
-
-
         .speaker-info h2 {
             margin-top: 0;
         }
@@ -568,27 +370,93 @@
             }
         }
 
-        .hr {
-            color: #234d20;
+        /* FAQ Section Styling */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
         }
 
-        /* Adjust the width of the FAQ section */
-        .ftco-faqs {
-            width: 85%;
-            margin: 0 auto;
-            /* Center the section horizontally */
+        .faq-heading {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        /* Ensure the container has full width */
-        .container {
-            width: 100%;
+        .faq-heading h2 {
+            font-size: 36px;
+            color: #333;
+            margin: 0;
         }
 
-        /* Optional: Adjust the max-width for better responsiveness */
+        /* Accordion Styling */
+        .accordion {
+            border: none;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            cursor: pointer;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 0;
+        }
+
+        .faq-toggle {
+            background: none;
+            border: none;
+            width: 1000%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            color: #333;
+            outline: none;
+        }
+
+        .faq-toggle:focus {
+            outline: none;
+        }
+
+        .faq-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle[aria-expanded="true"] i {
+            transform: rotate(180deg);
+        }
+
+
+        .faq-answer {
+            padding: 15px 20px;
+            background: #c9df8a;
+        }
+
         @media (max-width: 768px) {
-            .ftco-faqs {
-                width: 100%;
-                /* Use full width on smaller screens */
+            .faq-heading h2 {
+                font-size: 28px;
+            }
+
+            .faq-question h3 {
+                font-size: 18px;
+            }
+
+            .faq-toggle {
+                font-size: 16px;
             }
         }
     </style>
@@ -757,102 +625,70 @@
         </div>
     </div>
 
+
     <div class="separation"></div>
 
-     <section class="ftco-section bg-light ftco-faqs">
+    <section class="faq-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-1 order-md-last">
-                    <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0"
-                        style="background-image:url(images/indie.webp);">
-                        <a href="images/pet.mp4"
-                            class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
-                            <span class="fa fa-play"></span>
-                        </a>
+            <div class="faq-heading">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div id="faqAccordion" class="accordion">
+                <div class="faq-item">
+                    <div class="faq-question" id="faqOne">
+                        <h3>
+                            <button class="faq-toggle" data-toggle="collapse" data-target="#answerOne"
+                                aria-expanded="true" aria-controls="answerOne">
+                                What is SW&D?
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </h3>
                     </div>
-                    <div class="d-flex mt-3">
-                        <div class="img img-2 mr-md-2" style="background-image:url(images/dog.jpeg);"></div>
-                        <div class="img img-2 ml-md-2" style="background-image:url(images/indie.webp);"></div>
+                    <div id="answerOne" class="collapse show" aria-labelledby="faqOne" data-parent="#faqAccordion">
+                        <div class="faq-answer">
+                            <p>SW&D is Social Welfare and Development Committee.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="heading-section mb-5 mt-5 mt-lg-0">
-                        <h2 class="mb-3">Frequently Asked Questions</h2>
-                
+                <div class="faq-item">
+                    <div class="faq-question" id="faqTwo">
+                        <h3>
+                            <button class="faq-toggle" class="collapsed" data-toggle="collapse" data-target="#answerTwo"
+                                aria-expanded="false" aria-controls="answerTwo">
+                                What is VIT?
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </h3>
                     </div>
-                    <div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
-                        <div class="card">
-                            <div class="card-header p-0" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button href="#collapseOne"
-                                        class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                                        data-parent="#accordion" data-toggle="collapse" aria-expanded="true"
-                                        aria-controls="collapseOne">
-                                        <p class="mb-0">What is SW&D?</p>
-                                        <i class="fa" aria-hidden="true"></i>
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="card-body py-3 px-0">
-                                    <ol>
-                                        <li>SW&d is Social Walefare and Developement Committe</li>
-                                       
-                                    </ol>
-                                </div>
-                            </div>
+                    <div id="answerTwo" class="collapse" aria-labelledby="faqTwo" data-parent="#faqAccordion">
+                        <div class="faq-answer">
+                            <p>VIT stands for Vishwakarma Institute of Technology.</p>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="card">
-                            <div class="card-header p-0" id="headingTwo" role="tab">
-                                <h2 class="mb-0">
-                                    <button href="#collapseTwo"
-                                        class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                                        data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                        <p class="mb-0">What is vit?</p>
-                                        <i class="fa" aria-hidden="true"></i>
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="card-body py-3 px-0">
-                                    <ol>
-                                        <li>Vishwakarma Institute of Techology</li>
-                                        
-                                    </ol>
-                                </div>
-                            </div>
+                <div class="faq-item">
+                    <div class="faq-question" id="faqThree">
+                        <h3>
+                            <button class="faq-toggle" class="collapsed" data-toggle="collapse"
+                                data-target="#answerThree" aria-expanded="false" aria-controls="answerThree">
+                                What is the purpose of SW&D?
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="answerThree" class="collapse" aria-labelledby="faqThree" data-parent="#faqAccordion">
+                        <div class="faq-answer">
+                            <p>The purpose of SW&D is to promote social welfare and development through various
+                                initiatives and community projects.</p>
                         </div>
-
-                        <div class="card">
-                            <div class="card-header p-0" id="headingThree" role="tab">
-                                <h2 class="mb-0">
-                                    <button href="#collapseThree"
-                                        class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                                        data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        <p class="mb-0">What is VIT?</p>
-                                        <i class="fa" aria-hidden="true"></i>
-                                    </button>
-                                </h2>
-                            </div>
-                            <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="card-body py-3 px-0">
-                                    <ol>
-                                        <li>Vishwakarma Institute of Techology</li>
-                                        
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <div class="separation"></div>
 
@@ -873,18 +709,18 @@
                         <h4>Useful Links</h4>
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="./index.php">Home</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="./team/team_2022/index.html">About</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="./Calender/cal.html">Events</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./about.html">About</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./events.html">Events</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-4 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
+                        <h4>Important Links</h4>
                         <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="./flagship/flagship.html">Registrations</a>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./registration.html">Registrations</a>
                             </li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="./GP2/index.php">Sponsors</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="./nss/nss.html">Contact</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./Sponsors.html">Sponsors</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="./contactUs.html">Contact</a></li>
                         </ul>
                     </div>
 
