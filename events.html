@@ -135,6 +135,10 @@
         .icon {
             font-size: 50px;
         }
+
+        .headline {
+            text-align: left;
+        }
     </style>
 </head>
 
@@ -150,14 +154,14 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./about.html">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./events.html">Events</a>
+                    <li class="nav-item active">
+                        <a class="nav-link  selected" href="./events.html">Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./registration.html">Registration</a>
@@ -174,20 +178,18 @@
                 <a class="navbar-brand" href="#">
                     <img src="./assets/image/swdlogo.png" alt="Logo 2" height="80">
                 </a>
-                <a class="navbar-brand" href="#">
+                <a id="nss-logo" class="navbar-brand" href="#">
                     <img src="./assets/image/nss.png" alt="Logo 3" height="80">
                 </a>
             </div>
         </nav>
     </header>
 
-
-    <div class="containerF my-5">
-        <h1><span class="slide-down">Events</span></h1>
-
+    <div class="containerF h1 my-5 ">
+        <h1><span class="slide-down" style="font-size:40px">Events</span></h1>
     </div>
-    </div>
-    <div>
+
+    <div style="margin-left: 2%;">
         <!-- NGOs -->
         <div class="card-container">
 
@@ -195,11 +197,11 @@
                 <img src="./assets/image/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
                 <span>Visiting NGOs</span>
 
-                <h2 class="headline">
+                <h2 class="headline" style=" text-align: left;">
                     We Work Differently to <br><strong>help the needy people</strong>
                 </h2>
             </div>
-            <div class="ngos"  style="margin: 3%;">
+            <div class="ngos" style="margin: 3%;">
                 <!-- 1st ngo -->
                 <div class="card">
                     <div class="card-image">
@@ -267,58 +269,16 @@
             </div>
         </div>
 
-        <!-- Color changing logos -->
-        <section class="section partner">
-            <div class="container">
-                <a href="#" class="partner-logo">
-                    <img src="./assets/image/partner-1.png" width="157" height="55" loading="lazy" alt="Children Fund"
-                        class="gray">
 
-                    <img src="./assets/image/partner-1-active.png" width="157" height="55" loading="lazy"
-                        alt="Children Fund" class="color">
-                </a>
 
-                <a href="#" class="partner-logo">
-                    <img src="./assets/image/partner-2.png" width="163" height="55" loading="lazy"
-                        alt="Non Profit Agency" class="gray">
 
-                    <img src="./assets/image/partner-2-active.png" width="163" height="55" loading="lazy"
-                        alt="Non Profit Agency" class="color">
-                </a>
-
-                <a href="#" class="partner-logo">
-                    <img src="./assets/image/partner-3.png" width="149" height="55" loading="lazy"
-                        alt="Rise Hand Help Us" class="gray">
-
-                    <img src="./assets/image/partner-3-active.png" width="149" height="55" loading="lazy"
-                        alt="Rise Hand Help Us" class="color">
-                </a>
-
-                <a href="#" class="partner-logo">
-                    <img src="./assets/image/partner-4.png" width="169" height="58" loading="lazy" alt="Helping"
-                        class="gray">
-
-                    <img src="./assets/image/partner-4-active.png" width="169" height="58" loading="lazy" alt="Helping"
-                        class="color">
-                </a>
-
-                <a href="#" class="partner-logo">
-                    <img src="./assets/image/partner-5.png" width="211" height="55" loading="lazy"
-                        alt="Poor Fund Organization" class="gray">
-
-                    <img src="./assets/image/partner-5-active.png" width="211" height="55" loading="lazy"
-                        alt="Poor Fund Organization" class="color">
-                </a>
-
-            </div>
-        </section>
 
         <!-- Tenure Presentations -->
         <div class="card-container ppt">
             <div class="ngo-heading">
                 <img src="./assets/image/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
                 <span>Showcase Your Excellence</span>
-                <h2 class="headline"  text-align: left;>
+                <h2 class="headline">
                     Guidelines for Crafting a<br><strong>Compelling Tenure Presentation</strong>
                 </h2>
             </div>
@@ -338,7 +298,7 @@
                         commitment and impact in your field.
                     </p>
                 </div>
-                                
+
                 <div class="">
                     <div class="section-header">
                         <ion-icon name="checkmark-circle"></ion-icon>
@@ -360,7 +320,9 @@
                     </ul>
                 </div>
 
-                <div class="back-color">
+                
+
+                <div class="">
                     <div class="section-header">
                         <ion-icon name="checkmark-circle"></ion-icon>
                         <h2>Rules</h2>
@@ -377,7 +339,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="">
                     <div class="section-header">
                         <ion-icon name="checkmark-circle"></ion-icon>
@@ -393,8 +355,8 @@
                             within the time limit. Avoid overcrowding slides with information.</li>
                     </ul>
                 </div>
-                
-                <div class="back-color">
+
+                <div class="">
                     <div class="section-header">
                         <ion-icon name="checkmark-circle"></ion-icon>
                         <h2>Video Limit</h2>
@@ -433,7 +395,7 @@
                     academic and professional settings to gauge participants' ability to articulate their thoughts and
                     engage in constructive dialogue.
                 </p>
-                <div class="back-color">
+                <div class="">
                     <div class="section-header">
                         <ion-icon name="checkmark-circle"></ion-icon>
                         <h2>Topics for GD</h2>
@@ -469,7 +431,7 @@
 
                     </ul>
                 </div>
-                
+
 
                 <div class="">
                     <div class="section-header">
@@ -490,8 +452,6 @@
                     </ul>
                 </div>
             </div>
-
-
         </div>
 
         <div class="gd-parameter">
@@ -536,6 +496,7 @@
             </ul>
         </div>
     </div>
+
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="footer-top">
@@ -543,7 +504,7 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
+                        <h4>Quick Links</h4>
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="./index.php">Home</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="./team/team_2022/index.html">About</a>
@@ -553,7 +514,7 @@
                     </div>
 
                     <div class="col-lg-4 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
+                        <h4>Important Links</h4>
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="./flagship/flagship.html">Registrations</a>
                             </li>

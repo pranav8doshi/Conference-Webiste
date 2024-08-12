@@ -12,14 +12,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        .containerF {
+        h1 {
+            color: white;
+            background-image: url("./assets/image/about-bg-img.jpg");
+            background-size: cover;
+            background-position: 70%;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* filter: blur(50%); */
+        }
+
+        h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: inherit;
+            filter: brightness(50%);
+            z-index: 0;
+        }
+
+        .slide-down {
+            position: relative;
+            z-index: 1;
+            animation: slideDown 2s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* styling for container */
+        .containerR {
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 1.7rem; */
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0px;
+        }
+
+        @media (max-width: 991.98px) {
+            #footer .footer-top .social-links a {
+                display: inline-block;
+            }
+        }
+
+        .containerSpF {
             width: 100%;
             max-width: 100%;
             margin: auto;
             padding: 0px;
         }
 
-        .containerF h1 {
+        .containerSpF h1 {
             color: white;
             /* font-weight: 1000; */
             background-image: url("./assets/image/about-bg-img.jpg");
@@ -38,7 +107,7 @@
             /* filter: blur(50%); */
         }
 
-        .containerF h1::before {
+        .containerSpF h1::before {
             content: '';
             /* font-weight: 1000; */
             position: absolute;
@@ -71,74 +140,33 @@
             }
         }
 
-
-
-        @media (max-width: 768px) {
-            h1 {
-                height: 200px;
-                font-size: 24px;
-            }
-
-            .contact-info {
-                margin: 10px 0;
-                padding: 15px;
-            }
-
-            .map iframe {
-                height: 300px;
-            }
-
-            .contact-option {
-                width: 45%;
-                max-width: 45%;
-                margin: 10px;
-                flex: 1 1 100%;
-            }
+        .containerSpF {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
         }
-
-        @media (max-width: 480px) {
-            h1 {
-                height: 150px;
-                font-size: 20px;
-                padding: 10px;
-            }
-
-            .contact-info {
-                padding: 10px;
-                font-size: 14px;
-            }
-
-            .map {
-                margin: 20px 8px;
-            }
-
-            .map iframe {
-                height: 250px;
-            }
-
-            .contact-option {
-                width: 100%;
-                max-width: 100%;
-                margin: 10px 0;
-                flex: 1 1 100%;
-            }
-        }
-
-        .icon {
-            font-size: 50px;
-        }
-
 
         .flyer {
             width: 100%;
-            margin: auto;
-            background-color: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(245, 245, 245);
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* border: 1px solid black ; */
         }
 
         .sponsors {
-            padding: 20px;
             text-align: center;
+        }
+
+        .sponsors h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
         }
 
         .tier {
@@ -146,30 +174,68 @@
         }
 
         .tier h3 {
-            color: #FF7F50;
-            margin-bottom: 10px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #555;
         }
 
-        .sponsor-logo {
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 5px;
+        .sponsor-card {
+            position: relative;
             display: inline-block;
             width: 200px;
-            height: 70px;
-            border-radius: 5px;
+            /* Adjust width as needed */
+            height: 200px;
+            /* Adjust height as needed */
+            margin: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            ;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
         }
 
-        .sponsor-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
+        .sponsor-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .sponsor-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: opacity 0.3s ease;
+        }
+
+        .sponsor-card:hover img {
+            opacity: 0.3;
+        }
+
+        .sponsor-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: left;
+        }
+
+        .sponsor-card:hover .sponsor-info {
+            opacity: 1;
+        }
+
+        .sponsor-info h4 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .sponsor-info p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -199,7 +265,7 @@
                         <a class="nav-link" href="./registration.html">Registration</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./Sponsors.html">Sponsors</a>
+                        <a class="nav-link  selected" href="./Sponsors.html">Sponsors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./contactUs.html">Contact</a>
@@ -210,7 +276,7 @@
                 <a class="navbar-brand" href="#">
                     <img src="./assets/image/swdlogo.png" alt="Logo 2" height="80">
                 </a>
-                <a class="navbar-brand" href="#">
+                <a id="nss-logo" class="navbar-brand" href="#">
                     <img src="./assets/image/nss.png" alt="Logo 3" height="80">
                 </a>
             </div>
@@ -219,97 +285,181 @@
 
     <!-- Content -->
     <div>
-        <div class="containerF my-5" style="max-width: 85%;">
-            <h1 ><span class="slide-down">Sponsors</span></h1>
+        <div class="containerR my-5">
+            <h1><span class="slide-down">Sponsors</span></h1>
+          
+        </div>
+        <div class="containerSpF my-5">
+            <div class="flyer">
+                <section class="sponsors">
+                    <h2>Meet Our Sponsors</h2>
+                    <div class="tier">
+                        <h3>Tier 1</h3>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Gainsight Logo">
+                            <div class="sponsor-info">
+                                <h4>Gainsight</h4>
+                                <p>Leading customer success platform helping businesses manage customer
+                                    relationships.</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="tier">
+                        <h3>Tier 2</h3>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Deloitte Logo">
+                            <div class="sponsor-info">
+                                <h4>Deloitte</h4>
+                                <p>Industry-leading audit, consulting, tax, and advisory services.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="TSIA Logo">
+                            <div class="sponsor-info">
+                                <h4>TSIA</h4>
+                                <p>Provides insight and education on customer engagement and technology trends.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Intellum Logo">
+                            <div class="sponsor-info">
+                                <h4>Intellum</h4>
+                                <p>Specializes in customer training and education solutions.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="N3 Logo">
+                            <div class="sponsor-info">
+                                <h4>N3</h4>
+                                <p>Helps clients accelerate sales and marketing outcomes with digital solutions.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Higher Logic Logo">
+                            <div class="sponsor-info">
+                                <h4>Higher Logic</h4>
+                                <p>Engagement platform software for communities and marketing automation.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="containerF my-5">
-                <div class="flyer">
-                    <section class="sponsors">
-                        <h2>MEET OUR SPONSORS</h2>
-                        <div class="tier">
-                            <h3>tier 1</h3>
-                            <div class="sponsor-logo">
-                                <img src="assets/image/partner-1-active.png" alt="Gainsight Logo">
+                    <div class="tier">
+                        <h3>Tier 3</h3>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Sandler Logo">
+                            <div class="sponsor-info">
+                                <h4>Sandler</h4>
+                                <p>Offers professional development and sales training programs.</p>
                             </div>
                         </div>
-                        <div class="tier">
-                            <h3>tier 2</h3>
-                            <div class="sponsor-logo">
-                                <img src="TCS.NS-7401f1bd.png" alt="Deloitte Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=TSIA" alt="TSIA Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Intellum" alt="Intellum Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=N3" alt="N3 Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Higher+Logic"
-                                    alt="Higher Logic Logo">
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s"
+                                alt="Corporate Visions Logo">
+                            <div class="sponsor-info">
+                                <h4>Corporate Visions</h4>
+                                <p>Helps B2B companies develop effective messaging strategies.</p>
                             </div>
                         </div>
-                        <div class="tier">
-                            <h3>tier 3</h3>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Sandler" alt="Sandler Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Corporate+Visions"
-                                    alt="Corporate Visions Logo">
-                            </div>
-                        </div>
-                        <div class="tier">
-                            <h3>tier 4</h3>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Thnks" alt="Thnks Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=LearnUpon" alt="LearnUpon Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=TaskRay" alt="TaskRay Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Mixmax" alt="Mixmax Logo">
+                    </div>
+
+                    <div class="tier">
+                        <h3>Tier 4</h3>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Thnks Logo">
+                            <div class="sponsor-info">
+                                <h4>Thnks</h4>
+                                <p>Digital gratitude platform that helps companies build better relationships.</p>
                             </div>
                         </div>
-                        <div class="tier">
-                            <h3>tier 5</h3>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=UserVoice" alt="UserVoice Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=IcebergIQ" alt="IcebergIQ Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Precursive" alt="Precursive Logo">
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="LearnUpon Logo">
+                            <div class="sponsor-info">
+                                <h4>LearnUpon</h4>
+                                <p>Learning management system for employee and customer training.</p>
                             </div>
                         </div>
-                        <div class="tier">
-                            <h3>tier6</h3>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Satrix"
-                                    alt="Satrix Solutions Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Vanilla" alt="Vanilla Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Kryterion" alt="Kryterion Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Beynd" alt="Beynd Logo">
-                            </div>
-                            <div class="sponsor-logo">
-                                <img src="https://via.placeholder.com/150x50.png?text=Squelch" alt="Squelch Logo">
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="TaskRay Logo">
+                            <div class="sponsor-info">
+                                <h4>TaskRay</h4>
+                                <p>Project management solutions for customer onboarding processes.</p>
                             </div>
                         </div>
-                    </section>
-                </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Mixmax Logo">
+                            <div class="sponsor-info">
+                                <h4>Mixmax</h4>
+                                <p>Email productivity platform that helps teams communicate effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tier">
+                        <h3>Tier 5</h3>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="UserVoice Logo">
+                            <div class="sponsor-info">
+                                <h4>UserVoice</h4>
+                                <p>Customer feedback management and product development solutions.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="IcebergIQ Logo">
+                            <div class="sponsor-info">
+                                <h4>IcebergIQ</h4>
+                                <p>Offers data-driven customer insights for informed business decisions.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Precursive Logo">
+                            <div class="sponsor-info">
+                                <h4>Precursive</h4>
+                                <p>Platform for resource management and professional services automation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tier">
+                        <h3>Tier 6</h3>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Satrix Solutions Logo">
+                            <div class="sponsor-info">
+                                <h4>Satrix Solutions</h4>
+                                <p>Customer and employee feedback programs to enhance business performance.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Vanilla Logo">
+                            <div class="sponsor-info">
+                                <h4>Vanilla Forums</h4>
+                                <p>Open-source community software for building engaging online communities.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Kryterion Logo">
+                            <div class="sponsor-info">
+                                <h4>Kryterion</h4>
+                                <p>Online proctoring solutions and assessment technology for secure examinations.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Beynd Logo">
+                            <div class="sponsor-info">
+                                <h4>Beynd</h4>
+                                <p>Streamlines customer onboarding processes with automated workflows.</p>
+                            </div>
+                        </div>
+                        <div class="sponsor-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s" alt="Squelch Logo">
+                            <div class="sponsor-info">
+                                <h4>Squelch</h4>
+                                <p>Digital knowledge management platform for customer support and sales teams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
 
@@ -320,14 +470,14 @@
                     <div class="row">
 
                         <div class="col-lg-4 col-md-6 footer-links">
-                            <h4>Useful Links</h4>
+                            <h4>Quick Links</h4>
                             <ul>
                                 <li><i class="bi bi-chevron-right"></i> <a href="./index.php">Home</a></li>
                                 <li><i class="bi bi-chevron-right"></i> <a href="./about.html">About</a></li>
                                 <li><i class="bi bi-chevron-right"></i> <a href="./events.html">Events</a></li>
                             </ul>
                         </div>
-    
+
                         <div class="col-lg-4 col-md-6 footer-links">
                             <h4>Important Links</h4>
                             <ul>

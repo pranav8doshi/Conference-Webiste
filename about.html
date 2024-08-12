@@ -25,50 +25,14 @@
         }
 
 
-        /*About - Section*/
-        #about {
-            width: 100vw;
+        hr{
+            max-width: 85%;
         }
 
-        #about-bg-img-wrapper {
-            margin: auto;
-            margin-top: 6vh;
-            position: relative;
-            height: 48vh;
-            width: 85%;
-        }
-
-        #overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #overlay #text {
-            color: white;
-            letter-spacing: 3px;
-            font-weight: 800;
-            font-size: 45px;
-            z-index: 3;
-            animation: slidefromtop 1.5s ease forwards;
-            animation-delay: 0.2s;
-        }
-
-        #about-bg-img {
-            width: 100%;
-            height: 48vh;
-            display: block;
-        }
 
         hr {
             border-bottom: var(--dark-green) 7px solid;
-            width: 85%;
+            width: 100%;
             margin: auto;
             margin-top: 40px;
             margin-bottom: 40px;
@@ -103,7 +67,7 @@
 
         #conf-details {
             width: 85%;
-            height:auto;
+            height: auto;
             margin: auto;
             margin-top: 20px;
             background-color: var(--light-green);
@@ -134,7 +98,7 @@
         }
 
         #swd-details {
-            width: 85%;
+            width: 85% !important;
             margin: auto;
             background-color: var(--light-green);
             display: flex;
@@ -149,13 +113,13 @@
             background-color: rgb(240, 238, 238);
             border: 30px solid rgb(240, 238, 238);
             margin: 20px;
-            height: auto;
-            width: 450px;
+            height: 20rem;
+            /* width: 350px; */
             border-radius: 15px;
         }
 
         #clg-details {
-            width: 80%;
+            width: 85%;
             height: 20%;
             margin: auto;
             background-color: var(--light-green);
@@ -169,9 +133,9 @@
 
         #clg-details .clg-img {
             margin: 20px;
-            width: 450px;
+            /* width: 450px; */
             height: 20px;
-            height: auto;
+            height: 18rem;
             border-radius: 15px;
         }
 
@@ -250,6 +214,88 @@
                 font-size: 70%;
             }
         }
+
+
+        h1 {
+            color: white;
+            background-image: url("./assets/image/about-bg-img.jpg");
+            background-size: cover;
+            background-position: 70%;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* filter: blur(50%); */
+        }
+
+        h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: inherit;
+            filter: brightness(50%);
+            z-index: 0;
+        }
+
+        .slide-down {
+            position: relative;
+            z-index: 1;
+            animation: slideDown 2s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* styling for container */
+        .containerH {
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 1.7rem; */
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0px;
+        }
+
+        @media (max-width: 991.98px) {
+            #footer .footer-top .social-links a {
+                display: inline-block;
+            }
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -271,7 +317,7 @@
                         <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link selected" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./events.html">Events</a>
@@ -291,81 +337,89 @@
                 <a class="navbar-brand" href="#">
                     <img src="./assets/image/swdlogo.png" alt="Logo 2" height="80">
                 </a>
-                <a class="navbar-brand" href="#">
+                <a id="nss-logo" class="navbar-brand" href="#">
                     <img src="./assets/image/nss.png" alt="Logo 3" height="80">
                 </a>
             </div>
         </nav>
     </header>
 
-    
+
     <!-- // About Section -->
     <section id="about">
 
-        <div id="about-bg-img-wrapper">
-
-            <img id="about-bg-img" src="./assets/image/about-bg-img.jpg" alt="">
-
-            <div id="overlay">
-                <div id="text">About</div>
-            </div>
+        <div class="containerH my-5">
+            <!--<marquee behavior="scroll" direction="left">After the conference cerfificates will be given</marquee> -->
+            <h1><span class="slide-down">About</span></h1>
         </div>
-        <hr>
-        <div id="conf-details">
-            <div class="img-container">
-                <img class="conf-img" src="./assets/image/conf.jpg" alt="Conference">
+        
+        <div class="containerR my-5">
+            <div id="conf-details">
+                <div class="img-container">
+                    <img class="conf-img" src="./assets/image/conf.jpg" alt="Conference">
+                </div>
+                <div class="info" id="conf-info">
+                    <h2 class="heading">About the Conference</h2>
+                    <p class="para">The conference aims to unite individuals dedicated to societal betterment, providing
+                        a
+                        platform to share impactful ideas for social welfare. It will tackle pressing social issues and
+                        propose innovative solutions through dynamic presentations and collaborative group discussions.
+                        <br><br> Covering vital areas such as education, healthcare, technology, and the environment,
+                        the
+                        conference also includes open innovation themes to encourage participant contributions. <br><br>
+                        By
+                        featuring inspiring speaker sessions, it strives to raise awareness and cultivate responsible,
+                        proactive citizens committed to driving positive change in our society.
+                    </p>
+                </div>
             </div>
-            <div class="info" id="conf-info">
-                <h2 class="heading">About the Conference</h2>
-                <p class="para">The conference aims to unite individuals dedicated to societal betterment, providing a
-                    platform to share impactful ideas for social welfare. It will tackle pressing social issues and
-                    propose innovative solutions through dynamic presentations and collaborative group discussions.
-                    <br><br> Covering vital areas such as education, healthcare, technology, and the environment, the
-                    conference also includes open innovation themes to encourage participant contributions. <br><br> By
-                    featuring inspiring speaker sessions, it strives to raise awareness and cultivate responsible,
-                    proactive citizens committed to driving positive change in our society.
-                </p>
+            <hr>
+            <div id="swd-details">
+                <div class="info">
+                    <h2 class="heading">Social Welfare & Development <br> Committee</h2>
+                    <p class="para">The Social Welfare and Development Committee of VIT Pune has embarked on a
+                        remarkable
+                        journey of compassion and positive change. With a steadfast commitment for making a difference,
+                        our
+                        team has tirelessly worked across various domains, reaching out to the vulnerable and fostering
+                        a
+                        sense of hope and empowerment. <br><br> With various flagship events and GP2 Activities, we also
+                        place a strong emphasis on social services, ensuring that essential support reaches those in
+                        need.
+                        Our NSS (National Service Scheme) camps provide opportunities for volunteers to make a tangible
+                        difference, while our blood donation drives save lives and encourage a spirit of generosity.
+                        <br><br> Beyond the numbers, we have witnessed the profound strength of the human spirit,
+                        reminding
+                        us of the incredible power of kindness and empathy.
+                    </p>
+                </div>
+                <div class="img-container">
+                    <img class="swd-img" src="./assets/image/swdlogo.png" alt="SWD Logo">
+                </div>
             </div>
-        </div>
-        <hr>
-        <div id="swd-details">
-            <div class="info">
-                <h2 class="heading">Social Welfare & Development <br> Committee</h2>
-                <p class="para">The Social Welfare and Development Committee of VIT Pune has embarked on a remarkable
-                    journey of compassion and positive change. With a steadfast commitment for making a difference, our
-                    team has tirelessly worked across various domains, reaching out to the vulnerable and fostering a
-                    sense of hope and empowerment. <br><br> With various flagship events and GP2 Activities, we also
-                    place a strong emphasis on social services, ensuring that essential support reaches those in need.
-                    Our NSS (National Service Scheme) camps provide opportunities for volunteers to make a tangible
-                    difference, while our blood donation drives save lives and encourage a spirit of generosity.
-                    <br><br> Beyond the numbers, we have witnessed the profound strength of the human spirit, reminding
-                    us of the incredible power of kindness and empathy.
-                </p>
+            <hr>
+            <div id="clg-details">
+                <div class="img-container">
+                    <img class="clg-img" src="./assets/image/vitlogo.png" alt="VIT Pune">
+                </div>
+                <div class="info">
+                    <h2 class="heading">Vishwakarma Institute Of Technology, Pune</h2>
+                    <p class="para">Vishwakarma Institute of Technology, part of the Bansilal Ramnath Agrawal Charitable
+                        Trust, has been a symbol of academic excellence since its establishment in 1983. The institute
+                        proudly holds a NAAC accreditation of Grade 'A++', reflecting its commitment to high educational
+                        standards. <br><br> The college frequently organizes diverse activities to strengthen students'
+                        educational foundations and foster social awareness. The institution encourages students to
+                        explore
+                        new ideas and consistently supports their initiatives, promoting their holistic development.
+                        <br><br> In keeping with its tradition of innovation and social responsibility, VIT hosts
+                        various
+                        conferences and events. These activities emphasize the institute's dedication to both academic
+                        and
+                        personal growth, reinforcing its reputation as a leading educational institution in Pune.
+                    </p>
+                </div>
             </div>
-            <div class="img-container">
-                <img class="swd-img" src="./assets/image/swdlogo.png" alt="SWD Logo">
-            </div>
-        </div>
-        <hr>
-        <div id="clg-details">
-            <div class="img-container">
-                <img class="clg-img" src="./assets/image/vitlogo.png" alt="VIT Pune">
-            </div>
-            <div class="info">
-                <h2 class="heading">Vishwakarma Institute Of Technology, Pune</h2>
-                <p class="para">Vishwakarma Institute of Technology, part of the Bansilal Ramnath Agrawal Charitable
-                    Trust, has been a symbol of academic excellence since its establishment in 1983. The institute
-                    proudly holds a NAAC accreditation of Grade 'A++', reflecting its commitment to high educational
-                    standards. <br><br> The college frequently organizes diverse activities to strengthen students'
-                    educational foundations and foster social awareness. The institution encourages students to explore
-                    new ideas and consistently supports their initiatives, promoting their holistic development.
-                    <br><br> In keeping with its tradition of innovation and social responsibility, VIT hosts various
-                    conferences and events. These activities emphasize the institute's dedication to both academic and
-                    personal growth, reinforcing its reputation as a leading educational institution in Pune.
-                </p>
-            </div>
-        </div>
-        <hr>
+            <br>
     </section>
 
     <!-- ======= Footer ======= -->
@@ -375,7 +429,7 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
+                        <h4>Quick Links</h4>
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="./index.php">Home</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="./about.html">About</a></li>

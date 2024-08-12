@@ -12,58 +12,55 @@
   box-sizing: border-box;
 }
 
-* {
+*{
     font-family: 'Poppins', sans-serif;
-   
 }
-
-nav {
+nav{
     background-color: #FAEDCE;
     padding: 0.8rem 3rem !important;
 }
-
 .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
 }
-
 .navbar-nav .nav-item .nav-link {
     font-size: 1.4rem;
 }
-
-.nav-item {
+.nav-item{
     margin: 0.5rem 0;
 }
-
-.nav-link {
+.nav-link{
     padding: 1rem 1.5rem !important;
 }
-
-.nav-link:hover:not(.selected) {
+.nav-link:hover:not(.selected){
     color: white !important;
     background-color: black;
 }
-
 .navbar-toggler {
     border: none;
 }
-
-.right-logos {
+.right-logos{
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
-
 @media (max-width: 991.98px) {
     .navbar-nav .nav-item .nav-link {
         text-align: center;
         padding: 5px;
     }
-
     .right-logos {
         justify-content: space-between;
         width: 100%;
     }
+    #nss-logo{
+        position: relative;
+        left: 2rem;
+    }
 }
+
+
+
 #footer {
     background: #234d20;
     padding: 0 0 25px 0;
@@ -258,8 +255,8 @@ nav {
     letter-spacing: 3px;
     font-weight: 800;
     font-size: 45px;
+    
 }
-
 /* ngo cards */
 
 .card-container {
@@ -427,9 +424,9 @@ nav {
 }
 
 .tab-content ul{
-    padding-left: 3.5vw;
-    padding-bottom: 2.5vh;
+    padding: 0 3.5vw 2.5vh 3.5vw;
 }
+
 .back-color{
     background-color: var(--light-green);
     border-radius: 10px;
@@ -456,12 +453,9 @@ nav {
     line-height: 2; 
     font-size: 20px;
     font-weight: 500;
-}
-
-
-.tab-content{
     padding: 0 5rem 0 5rem;
 }
+
 
 .gd-parameter{
     margin-bottom: 10vh; 
@@ -483,6 +477,7 @@ nav {
     box-shadow: var(--card-shadow);
     transition: 0.25s ease;
     width: 25vw;
+    
   }
   
   .service-card:is(:hover, :focus-within) { 
@@ -521,6 +516,7 @@ nav {
 
     .service-card{
         width: 70vw;
+        outline-color: var(--light-green);
     }
 
     #footer .footer-top .social-links a {
@@ -538,13 +534,50 @@ nav {
     .ppt-start img{
         align-self: center;
     }
+
+    .tab-content{
+        padding: 0 2rem 0 2rem;
+    }
+
+    .tab-content ul{
+        padding: 0 5vw 2.5vh 7vw;
+    }
+    
 }
 
 @media (max-width: 520px) {
     .service-card{
         width: 85vw;
+
+    }
+
+    .tab-content ul{
+        padding: 0 5vw 2.5vh 9vw;
     }
 }
+
+.slide-down {
+    position: relative;
+    z-index: 1;
+    animation: slideDown 2s ease-out forwards;
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #footer .footer-top .social-links a {
+        display: inline-block;
+    }
+}
+
 
 .slide-down {
     position: relative;
