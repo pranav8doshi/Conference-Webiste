@@ -342,6 +342,9 @@
             flex: 1;
             text-align: center;
             animation: slideInLeft 1s ease-out;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: transform 1s ease-out, opacity 1s ease-out;
         }
 
         .speaker-photo img {
@@ -368,6 +371,10 @@
                 transform: translateX(0);
                 opacity: 1;
             }
+        }
+        .speaker-photo.slide-in {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         /* FAQ Section Styling */
@@ -506,7 +513,7 @@
     </header>
 
     <!-- Content -->
-     <br>
+    <br>
     <section id="home" class="container">
         <!-- Text Section -->
         <div class="text-section">
@@ -827,18 +834,25 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const speakerPhoto = document.querySelector('.speaker-photo');
+    const speakerPhoto = document.querySelector('.speaker-photo');
+    const section = document.getElementById('speakers');
 
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        speakerPhoto.style.animation = 'slideInLeft 1s ease-out forwards';
-                    }
-                });
+    if (speakerPhoto && section) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    speakerPhoto.classList.add('slide-in');
+                    observer.unobserve(section); // Stop observing after the animation triggers
+                }
             });
-
-            observer.observe(speakerPhoto);
         });
+
+        observer.observe(section);
+    } else {
+        console.error('Speaker section or photo element not found');
+    }
+});
+
 
     </script>
 
@@ -871,25 +885,45 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const counters = document.querySelectorAll('.counter');
+            let hasAnimated = false;
 
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
+            const updateCount = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
 
-                    const increment = target / 100;
+                const increment = target / 100;
 
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 200);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(() => updateCount(counter), 200);
+                } else {
+                    counter.innerText = target;
+                }
+            };
 
-                updateCount();
-            });
+            const startCounting = () => {
+                if (!hasAnimated) {
+                    counters.forEach(counter => {
+                        updateCount(counter);
+                    });
+                    hasAnimated = true; // Ensure counting only happens once
+                }
+            };
+
+            const checkScroll = () => {
+                const section = document.getElementById('fun-facts');
+                const sectionPosition = section.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight;
+
+                if (sectionPosition < screenPosition) {
+                    startCounting();
+                    window.removeEventListener('scroll', checkScroll);
+                }
+            };
+
+            window.addEventListener('scroll', checkScroll);
         });
+
     </script>
 </body>
 
