@@ -59,6 +59,12 @@
             animation: slideDown 2s ease-out forwards;
         }
 
+        @media (max-width: 768px){
+            #conf-logo {
+                margin-left: -1.5rem !important;
+            }
+        }
+
         @keyframes slideDown {
             from {
                 transform: translateY(-100%);
@@ -202,6 +208,10 @@
                 margin: 10px;
                 flex: 1 1 100%;
             }
+            
+            #conf-logo{
+                margin-left: -1.5rem !important;
+            }
         }
 
         @media (max-width: 480px) {
@@ -242,7 +252,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
-                <img src="./assets/image/vitlogo.png" alt="Logo 1" height="80">
+                <img src="./assets/image/conf-logo.png" alt="Logo 1" height="110" id="conf-logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -262,9 +272,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./registration.html">Registration</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="./Sponsors.html">Sponsors</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item  active">
                         <a class="nav-link  selected" href="./contactUs.html">Contact</a>
                     </li>
@@ -289,27 +299,27 @@
             <div class="contact-us ">
                 <h2>We're here to help</h2>
                 <div class="contact-options">
-                    <div class="contact-option">
+                    <div class="contact-option" style="font-size: 1.1rem;">
                         <div class="icon">
                             <i class="fa-solid fa-phone-volume"></i>
                         </div>
                         <h3>Call Us</h3>
-                        <h6>Rajwardhan Patil</h6>
+                        <h6>Rajwardhan Rokade</h6>
                         <p><a href="tel:9226470063" style="color: black;">9226470063</a></p>
                         <h6>Rushikesh Patil</h6>
                         <p><a href="tel:9172969011" style="color: black;">9172969011</a></p>
                         <h6>Harshita Yadav</h6>
                         <p><a href="tel:9168151957" style="color: black;">9168151957</a></p>
                     </div>
-                    <div class="contact-option">
+                    <div class="contact-option" style="font-size: 1.1rem;">
                         <div class="icon">
                             <i class="fa-solid fa-user-group"></i>
                         </div>
                         <h3>Join Us Now</h3>
                         <p>Join our What's App Community</p>
-                        <a href="#" class="btn">JOIN US</a>
+                        <a href="https://chat.whatsapp.com/F3Cqt99DQhV3qbzKt8YEwL" class="btn">JOIN US</a>
                     </div>
-                    <div class="contact-option">
+                    <div class="contact-option" style="font-size: 1.1rem;">
                         <div class="icon">
                             <i class="fa-regular fa-envelope"></i>
                         </div>

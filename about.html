@@ -175,6 +175,12 @@
             }
         }
 
+        @media (max-width: 768px){
+            #conf-logo {
+                margin-left: -1.5rem !important;
+            }
+        }
+
         @media (max-width: 991.98px) {
             #about-bg-img-wrapper {
                 width: 100%;
@@ -192,7 +198,7 @@
             #swd-details {
                 display: flex;
                 flex-direction: column-reverse;
-                width: 100%;
+                width: 100% !important;
             }
 
             .img-container {
@@ -285,6 +291,12 @@
             }
         }
 
+        @media (max-width: 768px) {
+            #conf-logo{
+                margin-left: -1.5rem !important;
+            }
+        }
+
         #overlay {
             position: absolute;
             top: 0;
@@ -305,7 +317,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
-                <img src="./assets/image/vitlogo.png" alt="Logo 1" height="80">
+                <img src="./assets/image/conf-logo.png" alt="Logo 1" height="110" id="conf-logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -325,9 +337,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./registration.html">Registration</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="./Sponsors.html">Sponsors</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="./contactUs.html">Contact</a>
                     </li>
@@ -346,14 +358,14 @@
 
 
     <!-- // About Section -->
-    <section id="about">
+    <section id="about" class="pb-5">
 
-        <div class="containerH my-5">
+        <div class="containerH pt-5">
             <!--<marquee behavior="scroll" direction="left">After the conference cerfificates will be given</marquee> -->
             <h1><span class="slide-down">About</span></h1>
         </div>
         
-        <div class="containerR my-5">
+        <div class="containerR pt-5">
             <div id="conf-details">
                 <div class="img-container">
                     <img class="conf-img" src="./assets/image/conf.jpg" alt="Conference">
@@ -363,18 +375,16 @@
                     <p class="para">The conference aims to unite individuals dedicated to societal betterment, providing
                         a
                         platform to share impactful ideas for social welfare. It will tackle pressing social issues and
-                        propose innovative solutions through dynamic presentations and collaborative group discussions.
-                        <br><br> Covering vital areas such as education, healthcare, technology, and the environment,
-                        the
-                        conference also includes open innovation themes to encourage participant contributions. <br><br>
+                        propose innovative solutions through dynamic presentations and collaborative round-table discussions.
+                        <br><br> It will cover vital areas such as education, healthcare, technology, and the environment. <br><br>
                         By
                         featuring inspiring speaker sessions, it strives to raise awareness and cultivate responsible,
                         proactive citizens committed to driving positive change in our society.
                     </p>
                 </div>
             </div>
-            <hr>
-            <div id="swd-details">
+            <!-- <hr> -->
+            <div id="swd-details" class="my-5">
                 <div class="info">
                     <h2 class="heading">Social Welfare & Development <br> Committee</h2>
                     <p class="para">The Social Welfare and Development Committee of VIT Pune has embarked on a
@@ -391,13 +401,15 @@
                         <br><br> Beyond the numbers, we have witnessed the profound strength of the human spirit,
                         reminding
                         us of the incredible power of kindness and empathy.
+                        <br><br>
+                        <strong>Website Link:</strong> <a href="https://swd.vit.edu/">https://swd.vit.edu/</a>
                     </p>
                 </div>
                 <div class="img-container">
                     <img class="swd-img" src="./assets/image/swdlogo.png" alt="SWD Logo">
                 </div>
             </div>
-            <hr>
+            <!-- <hr> -->
             <div id="clg-details">
                 <div class="img-container">
                     <img class="clg-img" src="./assets/image/vitlogo.png" alt="VIT Pune">
@@ -416,6 +428,8 @@
                         conferences and events. These activities emphasize the institute's dedication to both academic
                         and
                         personal growth, reinforcing its reputation as a leading educational institution in Pune.
+                        <br><br>
+                        <strong>Website Link:</strong> <a href="https://www.vit.edu/">https://www.vit.edu/</a>
                     </p>
                 </div>
             </div>

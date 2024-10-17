@@ -120,6 +120,8 @@
 
         .terms li {
             padding-left: 5px;
+            margin-bottom: 1rem;
+            line-height: 1.5rem;
         }
 
         .countdown-strip {
@@ -196,6 +198,10 @@
                 padding: 10px 10px;
                 gap: 10px;
             }
+            
+            #conf-logo{
+                margin-left: -1.5rem !important;
+            }
         }
 
         @media (max-width: 480px) {
@@ -207,6 +213,122 @@
                 gap: none;
             }
         }
+
+    #award-announcement {
+        background: linear-gradient(45deg, #234d20, #6fbf73);
+        color: white;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        position: relative;
+        overflow: hidden;
+        animation: fade 2s ease-out forwards;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #award-text {
+        height: 100%;
+        font-size: 26px;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .emoji {
+        font-size: 36px;
+        animation: bounce 2s infinite ease-in-out;
+        margin: 0 15px;
+    }
+
+    #award-name {
+        font-size: 28px;
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-weight: 800;
+        color: rgb(255, 226, 110);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @media (max-width: 768px){
+            #conf-logo {
+                margin-left: -1.5rem !important;
+            }
+        }
+
+    @keyframes bounce {
+        0%, 100%{
+            transform: translateY(20px);
+            animation-timing-function: ease-in-out;
+        }
+        50% {
+            transform: translateY(-20px);
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    @keyframes glow {
+        from {
+        text-shadow: 
+            0 0 15px rgba(243, 156, 18, 0.7), 
+            0 0 30px rgba(243, 156, 18, 0.6), 
+            0 0 45px rgba(243, 156, 18, 0.5), 
+            0 0 60px rgba(243, 156, 18, 0.4);
+    }
+    to {
+        text-shadow: 
+            0 0 25px rgba(241, 196, 15, 1), 
+            0 0 50px rgba(241, 196, 15, 0.9), 
+            0 0 75px rgba(241, 196, 15, 0.8), 
+            0 0 100px rgba(241, 196, 15, 0.7);
+    }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 768px) {
+    #award-announcement {
+        padding-left: 0;
+        padding-right: 0;
+        height: auto;
+        width: 95%;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #award-text {
+        font-size: 20px;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+    #award-name {
+        font-size: 22px;
+        padding: 5px;
+    }
+
+    .emoji {
+        font-size: 28px;
+        margin: 0 10px;
+    }
+}
+
     </style>
 </head>
 
@@ -214,7 +336,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
-                <img src="./assets/image/vitlogo.png" alt="Logo 1" height="80">
+                <img src="./assets/image/conf-logo.png" alt="Logo 1" height="110" id="conf-logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -234,9 +356,9 @@
                     <li class="nav-item active">
                         <a class="nav-link  selected" href="./registration.html">Registration</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="./Sponsors.html">Sponsors</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="./contactUs.html">Contact</a>
                     </li>
@@ -256,7 +378,7 @@
 
     <!-- Content -->
     <div class="containerR my-5">
-        <marquee behavior="scroll" direction="left">After the conference cerfificates will be given</marquee>
+        <marquee behavior="scroll" direction="left">Certificates will be distributed after the Conference.</marquee>
         <h1><span class="slide-down">Registration Page</span></h1>
         <div id="countdown" class="countdown-strip">
             <div class="time-unit">
@@ -281,22 +403,18 @@
                 <table class="events-table">
                     <thead>
                         <tr>
-                            <th>Event</th>
+                            <th>Registration Category</th>
                             <th>Fee</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- <tr>
+                            <td><b>Attendee</b></td>
+                            <td>150 INR</td>
+                        </tr> -->
                         <tr>
-                            <td><b>Event 1</b></td>
-                            <td>₹100</td>
-                        </tr>
-                        <tr>
-                            <td><b>Event 2</b></td>
-                            <td>₹150</td>
-                        </tr>
-                        <tr>
-                            <td><b>Event 3</b></td>
-                            <td>₹200</td>
+                            <td><b>Participant Team</b></td>
+                            <td>₹295 (Inclusive of 18% GST)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -306,14 +424,25 @@
             <a href="https://www.example.com/register" class="button">CLICK HERE TO REGISTER</a>
         </div> -->
         <div class="button-container linksR text-center">
-            <a href="#" class="register-button">REGISTER NOW</a>
+            <a href="https://forms.gle/B8aJZzP6BvwBXNET8" class="register-button">REGISTER NOW</a>
         </div>
+        
+        <div id="award-announcement">
+            <h2 id="award-text">
+                <span class="emoji">🏆</span> 
+                <p>The winning team will be awarded the prestigious 
+                    <span id="award-name">Sevasrujan Award</span>!</p>
+                <span class="emoji">🏆</span>
+            </h2>
+        </div>
+
+
         <div class="terms" style="list-style-type: decimal;">
-            <strong>Terms of Registration:</strong>
-            <li>Please read and accept the terms and conditions before registering.</li>
-            <li>new one</li>
-            <li>new teo</li>
-            <li>new three</li>
+            <strong style="line-height: 3.5rem;">Note:</strong>
+            <!-- <li><strong>Attendee Category:</strong> Registration fee towards the conference includes access to NGO Talks, Conference merchandise, and Refreshments.</li> -->
+            <li>Registration fee towards the conference includes access to NGO Talks, Tenure presentation, Round-Table Discussion, Conference merchandise, and Refreshments.</li>
+            <li>A <strong>Participant team</strong> must consist of <strong>exactly 5 members</strong>.</li>
+            <li><strong>Refund and Cancellation Policy:</strong> A candidate once registered and paid the registration fee is not allowed to cancel the registration. The registration fee for the conference once paid is not refundable.</li>
         </div>
     </div>
 
@@ -382,7 +511,7 @@
 
     <!-- function for timer -->
     <script>
-        const endDate = new Date('2024-08-10T23:59:59+05:30').getTime();
+        const endDate = new Date('2024-09-30T23:59:59+05:30').getTime();
 
         const daysElement = document.getElementById('days');
         const hoursElement = document.getElementById('hours');

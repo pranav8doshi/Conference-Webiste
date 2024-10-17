@@ -238,6 +238,10 @@
                 flex: 1 1 calc(50% - 20px);
                 max-width: calc(50% - 20px);
             }
+
+            #conf-logo {
+                margin-left: -1.5rem !important;
+            }
         }
 
         @media (max-width: 480px) {
@@ -259,32 +263,31 @@
         }
 
         .background-text {
-            position: relative;
+            position: absolute;
             width: 100%;
             padding: 60px 30px;
-            margin-top: 10px;
             box-sizing: border-box;
-            background-image: url('https://swd.vit.edu/img/pro.jpg');
-            background-size: cover;
-            background-position: center;
             color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .background-text .overlay {
+/*         .background-text .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            /* Transparent gray layer */
+            background: rgba(0, 0, 0, 0.2);
             z-index: 1;
-        }
+        } */
 
         .background-text h1,
         .background-text p {
             position: relative;
             z-index: 2;
+            margin: 2.1rem 0;
+            line-height: 2.2rem;
         }
 
         .image-slider img.active {
@@ -311,6 +314,158 @@
 
         .dot.active {
             background-color: #717171;
+        }
+
+        .hero-buttons button {
+            width: 12rem;
+            height: 4rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-weight: 500;
+            background-color: #c9df8a;
+        }
+
+        .hero-buttons button:hover {
+            background-color: #234d20;
+            color: white;
+        }
+
+        #reg-btn {
+            background-color: #234d20;
+            color: white;
+        }
+
+        #reg-btn:hover {
+            background-color: #c9df8a;
+            color: black;
+        }
+
+        /*Timeline*/
+        #timeline-sect {
+            width: 75%;
+            margin: 6rem auto 3rem;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 28%;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .timeline-item:hover{
+            transform: scale(1.1);
+        }
+
+        .timeline-item h3 {
+            color: black;
+            padding: 10px;
+            margin: 3.5rem 0 1rem 3.5rem;
+            border-radius: 5px;
+            position: absolute;
+        }
+
+        .timeline-item p {
+            background-color: #555;
+            color: white;
+            padding: 2rem 0rem;
+            border-radius: 5px;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .timeline-item .triangle {
+            width: 0;
+            height: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 20px solid #234d20;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(180deg);
+            margin-top: 3.3rem;
+            z-index: 3;
+        }
+
+        hr {
+            margin-top: 40px;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        .marker-container {
+            display: flex;
+            justify-content: center;
+            gap: 35%;
+            position: relative;
+            bottom: 1.5rem;
+        }
+
+        .marker-container div {
+            padding: 1px;
+            border: 2px solid black;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color: white;
+        }
+
+        /* Timeline for small devices */
+        #timeline-small-dev {
+            width: 70%;
+            margin: 5rem auto -2rem;
+        }
+
+        .timeline-small {
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item-small {
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .timeline-item-small h3 {
+            color: black;
+            padding: 10px;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+        }
+
+        .timeline-item-small p {
+            background-color: #555;
+            color: white;
+            padding: 2rem 0rem;
+            border-radius: 5px;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .timeline-item-small .triangle-small {
+            width: 0;
+            height: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 20px solid #234d20;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(180deg);
+            top: 7.6rem;
+            z-index: 3;
         }
 
         /* speaker */
@@ -372,6 +527,7 @@
                 opacity: 1;
             }
         }
+
         .speaker-photo.slide-in {
             opacity: 1;
             transform: translateX(0);
@@ -379,7 +535,7 @@
 
         /* FAQ Section Styling */
         .faq-section {
-            padding: 60px 0;
+            padding: 50px 0;
             background-color: #f9f9f9;
         }
 
@@ -410,7 +566,7 @@
         .faq-question {
             padding: 15px 20px;
             cursor: pointer;
-            background: #fff;
+            background: #c9df8a;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -450,7 +606,7 @@
 
         .faq-answer {
             padding: 15px 20px;
-            background: #c9df8a;
+            background: #ffffff;
         }
 
         @media (max-width: 768px) {
@@ -458,22 +614,120 @@
                 font-size: 28px;
             }
 
-            .faq-question h3 {
-                font-size: 18px;
+            .faq-question h3 button {
+                font-size: 15px;
+                margin-left: -0.5rem;
+                margin-right: 0.5rem;
             }
 
             .faq-toggle {
                 font-size: 16px;
             }
+
+            .background-text {
+                padding: 10px;
+                font-size: 1rem;
+            }
+
+            .background-text p {
+                line-height: 1.8rem;
+            }
+
+            #timeline-sect{
+                display: none;
+            }
+
+            #timeline-small-dev{
+                display: block;
+            }
+
+            #conf-logo{
+                margin-left: -2.5rem;
+            }
+
+            .ngo-heading{
+                margin-left: -1rem !important;
+            }
+
+            .hero-buttons{
+                margin-top: 100rem;
+            }
         }
+
+        @media (min-width: 769px){
+            #timeline-sect{
+                display: block;
+            }
+
+            #timeline-small-dev{
+                display: none;
+            }
+        }
+
+        /* button for broucher */
+
+        .brochure-btn {
+            /* display: block; */
+            padding: 10px 24px;
+            background-color: #c9df8a;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* margin-left: 500px; */
+            margin-bottom: -2rem;
+            margin-top: 2rem;
+            text-align: center;
+            height: fit-content;
+        }
+
+            .brochure-btn:hover {
+            background-color: #234d20;
+            color: white; 
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+            @media (max-width: 768px) {
+            .brochure-btn {
+                width: 80%;
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-left: 20px;
+            }
+        }
+
+            @media (max-width: 480px) {
+            .brochure-btn {
+                width: 90%;
+                margin-left: none;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .brochure-btn::after {
+                font-size: 10px;
+            }
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+
     </style>
 </head>
 
-<body style="background-color: #FFFFFF;">
+<body style="background-color: #fff;">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
-                <img src="./assets/image/vitlogo.png" alt="Logo 1" height="80">
+                <img src="./assets/image/conf-logo.png" alt="Logo 1" height="110" id="conf-logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -481,8 +735,8 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active ">
-                        <a class="nav-link  selected" href="./index.html">Home</a>
+                    <li class="nav-item active">
+                        <a class="nav-link selected" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./about.html">About</a>
@@ -493,9 +747,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./registration.html">Registration</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="./Sponsors.html">Sponsors</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="./contactUs.html">Contact</a>
                     </li>
@@ -515,18 +769,22 @@
     <!-- Content -->
     <br>
     <section id="home" class="container">
-        <!-- Text Section -->
-        <div class="text-section">
-            <div class="background-text">
-                <div class="overlay"></div>
-                <h1 class="animated-text">Welcome to the Social Welfare Development Club</h1>
-                <p class="bold">We aim to improve the well-being of our community through various events and activities.
-                </p>
-            </div>
-        </div>
-
         <!-- Image Slider -->
         <div class="image-slider">
+            <div class="background-text">
+                <div class="overlay"></div>
+                <h1 class="animated-text">PRISM 2024: Public Reform, Innovation, Sustainability, and Management</h1>
+                <p class="bold"><small>Organized in In-person (Offline mode) by</small> <br>
+                    Social Welfare and Development Committee <br>
+                    <small>Vishwakarma Institute of Technology, Pune</small>
+                    <br>
+                    <strong>October 04, 2024</strong>
+                </p>
+                <div class="hero-buttons">
+                    <a href="./events.html"><button id="events-btn">Events</button></a>
+                    <a href="./registration.html"><button id="reg-btn">Registration</button></a>
+                </div>
+            </div>
             <i class="fas fa-chevron-left" onclick="prevSlide()"></i>
             <i class="fas fa-chevron-right" onclick="nextSlide()"></i>
             <img src="https://swd.vit.edu/img/pro.jpg" class="slide active" alt="Slide 1">
@@ -539,13 +797,69 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-
-
     </section>
 
+    <section id="timeline-sect">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="triangle"></div>
+                <p style="background-color: #234d20;">Registration Begins</p>
+                <h3>06 Sept, 2024</h3>
+            </div>
+            <div class="timeline-item">
+                <div class="triangle" style="border-bottom-color: #c9df8a;"></div>
+                <p style="background-color: #c9df8a; color: black;">Registration Ends</p>
+                <h3>30 Sept, 2024 <br/><strong>(Extended)</strong></h3>
+            </div>
+            <div class="timeline-item">
+                <div class="triangle"></div>
+                <p style="background-color: #234d20;">Conference Date</p>
+                <h3>04 Oct, 2024</h3>
+            </div>
+            <!-- <div class="timeline-item">
+                <div class="triangle" style="border-bottom-color: #c9df8a;"></div>
+                <p style="background-color: #c9df8a; color: black;">Conference Dates</p>
+                <h3>04 Oct, 2024</h3>
+            </div> -->
+        </div>
 
-    <section id="speakers" class="container">
-        <div class="speaker">
+        <div>
+            <hr>
+            <div class="marker-container">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline-small-dev" style="margin-top: 30px;">
+        <div class="timeline-small">
+            <div class="timeline-item-small">
+                <div class="triangle-small"></div>
+                <p style="background-color: #234d20;">Registration Begins</p>
+                <h3>06 Sept, 2024</h3>
+            </div>
+            <div class="timeline-item-small">
+                <div class="triangle-small" style="border-bottom-color: #c9df8a;"></div>
+                <p style="background-color: #c9df8a; color: black;">Registration Ends</p>
+                <h3>30 Sept, 2024 <strong>(Extended)</strong></h3>
+            </div>
+            <div class="timeline-item-small">
+                <div class="triangle-small"></div>
+                <p style="background-color: #234d20;">Conference Date</p>
+                <h3>04 Oct, 2024</h3>
+            </div>
+            <!-- <div class="timeline-item-small">
+                <div class="triangle-small" style="border-bottom-color: #c9df8a;"></div>
+                <p style="background-color: #c9df8a; color: black;">Conference Dates</p>
+                <h3>04 Oct, 2024</h3>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- <section id="speakers" class="container">
+        <div class="speaker" style="background-color: #fefcfc;">
             <div class="speaker-photo">
                 <img src="https://starsunfolded.com/wp-content/uploads/2021/06/Medha-Patkar.jpg" alt="Speaker Photo"
                     class="photo">
@@ -556,15 +870,12 @@
                     welfare development.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <div class="separation"></div>
-
-    <div id="fun-facts" class="fun-facts section overlay">
+    <!-- <div id="fun-facts" class="fun-facts section overlay">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Fun -->
                     <div class="single-fun">
                         <i class="icofont icofont-home"></i>
                         <div class="content">
@@ -572,10 +883,8 @@
                             <p>loream</p>
                         </div>
                     </div>
-                    <!-- End Single Fun -->
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Fun -->
                     <div class="single-fun">
                         <i class="icofont icofont-user-alt-3"></i>
                         <div class="content">
@@ -583,10 +892,8 @@
                             <p>loream</p>
                         </div>
                     </div>
-                    <!-- End Single Fun -->
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Fun -->
                     <div class="single-fun">
                         <i class="icofont-simple-smile"></i>
                         <div class="content">
@@ -594,10 +901,8 @@
                             <p>loream</p>
                         </div>
                     </div>
-                    <!-- End Single Fun -->
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Fun -->
                     <div class="single-fun">
                         <i class="icofont icofont-table"></i>
                         <div class="content">
@@ -605,15 +910,14 @@
                             <p>Years of Experience</p>
                         </div>
                     </div>
-                    <!-- End Single Fun -->
                 </div>
             </div>
         </div>
     </div>
-    <div class="separation"></div>
+    <div class="separation"></div> -->
 
 
-    <div class="sponsors-section">
+    <!-- <div class="sponsors-section">
         <h2>Our Sponsors</h2>
         <div class="sponsors-container">
             <div class="sponsor">
@@ -628,12 +932,87 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWL-Z3rWhLx1kTSD8B0Fa0KH0iPfBt2rgJ-g&s"
                     alt="Sponsor 3">
             </div>
-            <!-- Add more sponsors as needed -->
         </div>
     </div>
 
 
-    <div class="separation"></div>
+    <div class="separation"></div> -->
+
+    <div class="card-container" style="display: block;">
+
+        <div class="ngo-heading" style="display: flex; justify-content: center; margin-left: -4rem; margin-top: 6rem;">
+            <!-- <img src="./assets/image/subtitle-img-green.png" width="32" height="7" alt=""> -->
+
+            <h2 class="headline">
+               <strong> Visiting NGOs </strong>
+            </h2>
+        </div>
+        <div class="ngos " style="margin: 0% 5% 0.5%; flex: auto;">
+            <!-- 1st ngo -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/image/deepsthambh.png" alt="NGO Image">
+                    <div class="card-hover-info"></div>
+                </div>
+                <div class="card-name">
+                    <h3>Deepstambh Foundation</h3>
+                </div>
+            </div>
+
+            <!-- 2nd NGO -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/image/naam.png" alt="NGO Image">
+                    <div class="card-hover-info"></div>
+                </div>
+                <div class="card-name">
+                    <h3>Naam Foundation</h3>
+                </div>
+            </div>
+
+            <!-- 3rd NGO -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="./assets/image/unicef.jpg" alt="NGO Image">
+                    <div class="card-hover-info"></div>
+                </div>
+                <div class="card-name">
+                    <h3>UNICEF</h3>
+                </div>
+            </div>
+
+            <!-- 4th NGO -->
+            <!-- <div class="card">
+                <div class="card-image">
+                    <img src="./assets/image/child-orphanage-ngo.webp" alt="NGO Image">
+                    <div class="card-hover-info">
+                        <p>Short info about the NGO.</p>
+                    </div>
+                </div>
+                <div class="card-name">
+                    <h3>Sampark Balgram</h3>
+                </div>
+            </div> -->
+
+            <!-- 5th NGO -->
+            <!-- <div class="card">
+                <div class="card-image">
+                    <img src="./assets/image/child-orphanage-ngo.webp" alt="NGO Image">
+                    <div class="card-hover-info">
+                        <p>Short info about the NGO.</p>
+                    </div>
+                </div>
+                <div class="card-name">
+                    <h3>Sampark Balgram</h3>
+                </div>
+            </div> -->
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <a href="PRISM2024_Brochure.pdf" download="PRISM2024_Brochure.pdf" class="brochure-btn">Download Brochure here!!</a>
+        </div>
+    </div>
+
+    <div class="separation" style="margin-top: 6rem;"></div>
 
     <section class="faq-section">
         <div class="container">
@@ -646,14 +1025,15 @@
                         <h3>
                             <button class="faq-toggle" data-toggle="collapse" data-target="#answerOne"
                                 aria-expanded="true" aria-controls="answerOne">
-                                What is SW&D?
+                                What is PRISM 2024?
                                 <i class="fa fa-chevron-down"></i>
                             </button>
                         </h3>
                     </div>
                     <div id="answerOne" class="collapse show" aria-labelledby="faqOne" data-parent="#faqAccordion">
                         <div class="faq-answer">
-                            <p>SW&D is Social Welfare and Development Committee.</p>
+                            <p>It is a platform to unite individuals dedicated to societal betterment to share impactful
+                                ideas for social welfare.</p>
                         </div>
                     </div>
                 </div>
@@ -663,14 +1043,14 @@
                         <h3>
                             <button class="faq-toggle" class="collapsed" data-toggle="collapse" data-target="#answerTwo"
                                 aria-expanded="false" aria-controls="answerTwo">
-                                What is VIT?
+                                How many members can be in a team?
                                 <i class="fa fa-chevron-down"></i>
                             </button>
                         </h3>
                     </div>
                     <div id="answerTwo" class="collapse" aria-labelledby="faqTwo" data-parent="#faqAccordion">
                         <div class="faq-answer">
-                            <p>VIT stands for Vishwakarma Institute of Technology.</p>
+                            <p>A team must consist of exactly 5 members.</p>
                         </div>
                     </div>
                 </div>
@@ -687,11 +1067,28 @@
                     </div>
                     <div id="answerThree" class="collapse" aria-labelledby="faqThree" data-parent="#faqAccordion">
                         <div class="faq-answer">
+                            <p>Social Welfare and Development Committee (SW&D) of VIT Pune is dedicated to making a positive impact through compassionate initiatives. The team works across various domains, empowering vulnerable communities and fostering hope.</p>
+                        </div>
+                    </div>
+                </div>
+
+<!--                 <div class="faq-item">
+                    <div class="faq-question" id="faqFour">
+                        <h3>
+                            <button class="faq-toggle" class="collapsed" data-toggle="collapse"
+                                data-target="#answerFour" aria-expanded="false" aria-controls="answerFour">
+                                What is the purpose of SW&D?
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="answerFour" class="collapse" aria-labelledby="faqFour" data-parent="#faqAccordion">
+                        <div class="faq-answer">
                             <p>The purpose of SW&D is to promote social welfare and development through various
                                 initiatives and community projects.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -834,24 +1231,24 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-    const speakerPhoto = document.querySelector('.speaker-photo');
-    const section = document.getElementById('speakers');
+            const speakerPhoto = document.querySelector('.speaker-photo');
+            const section = document.getElementById('speakers');
 
-    if (speakerPhoto && section) {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    speakerPhoto.classList.add('slide-in');
-                    observer.unobserve(section); // Stop observing after the animation triggers
-                }
-            });
+            if (speakerPhoto && section) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            speakerPhoto.classList.add('slide-in');
+                            observer.unobserve(section); // Stop observing after the animation triggers
+                        }
+                    });
+                });
+
+                observer.observe(section);
+            } else {
+                console.error('Speaker section or photo element not found');
+            }
         });
-
-        observer.observe(section);
-    } else {
-        console.error('Speaker section or photo element not found');
-    }
-});
 
 
     </script>
@@ -926,5 +1323,4 @@
 
     </script>
 </body>
-
 </html>

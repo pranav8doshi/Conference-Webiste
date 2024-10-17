@@ -15,47 +15,55 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
-nav{
-    background-color: #FAEDCE;
-    padding: 0.8rem 3rem !important;
+nav {
+    background-color: #D2E3C8;;
+    padding-left: 2rem !important;
+    border-bottom:  5px solid #1A5319; /* Added border */
 }
+
 .navbar-brand {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
+
 .navbar-nav .nav-item .nav-link {
     font-size: 1.4rem;
+    font-weight: bold;
+    color: #1A5319;
 }
-.nav-item{
-    margin: 0.5rem 0;
+
+.nav-item {
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
 }
+
 .nav-link{
     padding: 1rem 1.5rem !important;
 }
 .nav-link:hover:not(.selected){
     color: white !important;
-    background-color: black;
+    background-color: black ;
 }
+
 .navbar-toggler {
     border: none;
 }
-.right-logos{
+
+.right-logos {
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    gap: 0.5rem;
+     
 }
+
 @media (max-width: 991.98px) {
     .navbar-nav .nav-item .nav-link {
         text-align: center;
         padding: 5px;
     }
+
     .right-logos {
         justify-content: space-between;
         width: 100%;
-    }
-    #nss-logo{
-        position: relative;
-        left: 2rem;
     }
 }
 
@@ -360,7 +368,8 @@ nav{
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    border-bottom: 2px solid #234d20;
 }
 
 .card-hover-info {
